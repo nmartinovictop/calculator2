@@ -98,9 +98,14 @@ const setOperator = (operator) => {
         operators.forEach(ele => ele.classList.remove('highlighted'))
         operator.target.classList.add('highlighted')
     } else {
+        if (num2 == '') {
         operatorVar = operator.target.textContent
         operators.forEach(ele => ele.classList.remove('highlighted'))
         operator.target.classList.add('highlighted')
+        } else {
+            computeResult()
+            operatorVar = operator.target.textContent
+        }
     }
 }
 
